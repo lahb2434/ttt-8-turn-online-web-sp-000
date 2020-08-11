@@ -18,10 +18,10 @@ end
 
 # Position Taken
 def position_taken?(board,index)
-  if board[index].include?("X"||"O")
-    true
-  else board[index].include?(" "||""||nil)
+  if board[index].include?(" "||""||nil)
     false
+  else
+    true
   end
 end
 
@@ -41,10 +41,9 @@ def turn(board)
   user_input = gets.chomp
   index = input_to_index(user_input)
   if valid_move?(board, index) 
-    move(board, cell, character = "X")
-    turn(board)
+    
+    
   end
-display_board
 end
 
   
