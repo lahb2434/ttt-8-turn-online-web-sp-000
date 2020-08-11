@@ -31,8 +31,8 @@ def input_to_index(input)
 end
 
 # Move
-def move(board, cell, character = "X")
-  board[cell] = character
+def move(board, index, character = "X")
+  board[index] = character
 end 
 
 # Turn
@@ -41,7 +41,7 @@ def turn(board)
   user_input = gets.chomp
   index = input_to_index(user_input)
   if valid_move?(board, index) 
-    move(board, cell, player)
+    move(board, index , player)
     
   end
 end
