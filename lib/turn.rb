@@ -1,10 +1,10 @@
 # Display Board
-def display_board(cell)
-  puts " #{cell[0]} | #{cell[1]} | #{cell[2]} "
+def display_board(board)
+  puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"      
-  puts " #{cell[3]} | #{cell[4]} | #{cell[5]} "
+  puts " #{board[3]} | #{board[4]} | #{board[5]} "
   puts "-----------"
-  puts " #{cell[6]} | #{cell[7]} | #{cell[8]} "
+  puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
 # Valid Move
@@ -40,7 +40,7 @@ def turn(board)
   puts "Please enter 1-9:"
   user_input = gets.chomp
   input_to_index(user_input)
-   loop do valid_move?(board, index) 
+   valid_move?(board, index) 
      
   else
     turn(board)
